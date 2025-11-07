@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="auteurRepository" class="com.bibliotheque.repository.impl.AuteurRepositoryImpl" />
+    <bean id="livreRepository" class="com.bibliotheque.repository.impl.LivreRepositoryImpl" />
+    <bean id="utilisateurRepository" class="com.bibliotheque.repository.impl.UtilisateurRepositoryImpl" />
+    <bean id="auteurService" class="com.bibliotheque.service.impl.AuteurServiceImpl">
+        <constructor-arg ref="auteurRepository" />
+    </bean>
+    <bean id="livreService" class="com.bibliotheque.service.impl.LivreServiceImpl">
+        <constructor-arg ref="livreRepository" />
+    </bean>
+    <bean id="utilisateurService" class="com.bibliotheque.service.impl.UtilisateurServiceImpl">
+        <constructor-arg ref="utilisateurRepository" />
+    </bean>
+
+</beans>
