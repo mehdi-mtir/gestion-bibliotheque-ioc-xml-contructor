@@ -11,7 +11,7 @@ public class UtilisateurServiceImpl implements UtilisateurService {
 
     private UtilisateurRepository utilisateurRepository;
 
-    public UtilisateurServiceImpl(UtilisateurRepository utilisateurRepository) {
+    public void setUtilisateurRepository(UtilisateurRepository utilisateurRepository) {
         this.utilisateurRepository = utilisateurRepository;
     }
 

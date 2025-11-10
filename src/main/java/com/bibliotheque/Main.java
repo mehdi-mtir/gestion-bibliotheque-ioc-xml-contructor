@@ -23,7 +23,7 @@ public class Main {
             ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
             //Initialisation des services
-            AuteurService auteurService = context.getBean(AuteurServiceImpl.class); //IoC
+            AuteurService auteurService = context.getBean(AuteurServiceImpl.class); //IoC et DI
             LivreService livreService = context.getBean(LivreServiceImpl.class);
             UtilisateurService utilisateurService = context.getBean(UtilisateurServiceImpl.class);
 

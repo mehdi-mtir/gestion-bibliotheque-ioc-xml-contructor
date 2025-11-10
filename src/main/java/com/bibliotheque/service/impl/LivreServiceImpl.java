@@ -11,7 +11,7 @@ public class LivreServiceImpl implements LivreService {
 
     private LivreRepository livreRepository;
 
-    public LivreServiceImpl(LivreRepository livreRepository) {
+    public void setLivreRepository(LivreRepository livreRepository) {
         this.livreRepository = livreRepository;
     }
 

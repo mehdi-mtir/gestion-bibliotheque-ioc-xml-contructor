@@ -8,13 +8,13 @@
     <bean id="livreRepository" class="com.bibliotheque.repository.impl.LivreRepositoryImpl" />
     <bean id="utilisateurRepository" class="com.bibliotheque.repository.impl.UtilisateurRepositoryImpl" />
     <bean id="auteurService" class="com.bibliotheque.service.impl.AuteurServiceImpl">
-        <constructor-arg ref="auteurRepository" />
+        <property name="auteurRepositoty" ref="auteurRepository" />
     </bean>
     <bean id="livreService" class="com.bibliotheque.service.impl.LivreServiceImpl">
-        <constructor-arg ref="livreRepository" />
+        <property name="livreRepository" ref="livreRepository" />
     </bean>
     <bean id="utilisateurService" class="com.bibliotheque.service.impl.UtilisateurServiceImpl">
-        <constructor-arg ref="utilisateurRepository" />
+        <property name="utilisateurRepository" ref="utilisateurRepository" />
     </bean>
 
 </beans>

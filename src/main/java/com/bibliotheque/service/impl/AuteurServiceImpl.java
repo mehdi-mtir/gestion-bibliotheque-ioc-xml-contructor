@@ -9,7 +9,9 @@ import java.util.List;
 public class AuteurServiceImpl implements AuteurService {
     private AuteurRepository auteurRepository;
 
-    public AuteurServiceImpl(AuteurRepository auteurRepository){
+    public AuteurServiceImpl(){}
+
+    public void setAuteurRepository(AuteurRepository auteurRepository) {
         this.auteurRepository = auteurRepository;
     }
 
